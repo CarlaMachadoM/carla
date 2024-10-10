@@ -1,0 +1,94 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Ensure body takes full height */
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%; /* Increase width to cover white spaces */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Behind everything else */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+#fireflyCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent mouse events on the canvas */
+    z-index: 1; /* Above the video but below the carousel */
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden; /* Hide overflow */
+    background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Above the video */
+    margin: 20px auto; /* Center carousel */
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-item {
+    min-width: 100%; /* Each item takes full width */
+    padding: 20px; /* Space around the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333; /* Text color */
+    background-color: #8B4513; /* Dark brown for the item */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;  
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+    z-index: 3; /* Above everything else */
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 20px; /* Size of the cursor */
+    height: 20px; /* Size of the cursor */
+    background-color: rgba(255, 255, 0, 0.8); /* Cursor color */
+    border-radius: 50%; /* Make it circular */
+    pointer-events: none; /* Prevent interference with mouse events */
+    transform: translate(-50%, -50%); /* Center the cursor */
+    z-index: 100; /* Ensure it's above everything */
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/wind.png" type="image/x-icon">
+</head>
+<body>
+
+    <video id="backgroundVideo" autoplay loop muted playsinline class="background-video">
+        <source src="https://cdn.pixabay.com/video/2024/08/16/226762_large.mp4" type="video/mp4">
+    </video>
+        
+    <!-- Firefly Canvas -->
+    <canvas id="fireflyCanvas"></canvas>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="carousel-items">
+            <div class="carousel-item active" id="project1">Project 1</div>
+            <div class="carousel-item" id="project2">Project 2</div>
+            <div class="carousel-item" id="project3">Project 3</div>
+            <div class="carousel-item" id="project4">Project 4</div>
+        </div>
+        <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-button next" id="nextBtn">&#10095;</button>
+    </div>
+
+    <div class="custom-cursor"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
